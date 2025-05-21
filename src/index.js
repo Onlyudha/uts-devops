@@ -18,10 +18,10 @@ app.post('/login', (req, res) => {
   const { username, password } = req.body;
 
   // Autentikasi sederhana
-  if (username === 'admin' && password === 'admin123') {
+  if (username === 'admin' && password === 'admin') {
     res.send(`<h2>Login berhasil! Selamat datang, ${username}.</h2>`);
   } else {
-    res.send('<h2>Login gagal! Username atau password salah.</h2><a href="/">Kembali</a>');
+    res.send('<h2>Login gagal!</h2><a href="/">Kembali</a>');
   }
 });
 

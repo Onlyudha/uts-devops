@@ -10,7 +10,7 @@ terraform {
 provider "docker" {}
 
 resource "docker_image" "login_image" {
-  name = "projek-uts-devops"
+  name = "uts-devops"
   build {
     context    = "./"
     dockerfile = "Dockerfile"
