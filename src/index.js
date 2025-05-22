@@ -4,20 +4,19 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-// Middleware
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-// Route: GET login page
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'views', 'login.html'));
 });
 
-// Route: POST login
+
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
 
-  // Autentikasi sederhana
+
   if (username === 'admin' && password === 'admin') {
     res.send(`<h2>Login berhasil! Selamat datang, ${username}.</h2>`);
   } else {

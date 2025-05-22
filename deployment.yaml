@@ -14,11 +14,9 @@ spec:
     spec:
       containers:
         - name: login
-          image: projek-uts-devops:latest
-          imagePullPolicy: Never
+          image: uts-devops:latest
+          imagePullPolicy: IfNotPresent
           ports:
-<<<<<<< HEAD
             - containerPort: 3000
-=======
-            - containerPort: 3000
->>>>>>> f149560348c91028d9465368363fd39acd2d1731
+
+
